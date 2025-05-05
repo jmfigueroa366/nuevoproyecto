@@ -1,0 +1,150 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', cursive;
+  background-image: url('IMG-20250404-WA0483.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: fadeBackground 3s ease-in-out infinite alternate;
+}
+
+@keyframes fadeBackground {
+  from {
+    background-size: 100%;
+  }
+  to {
+    background-size: 105%;
+  }
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 3em;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 25px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgba(76, 76, 190, 0.3);
+  backdrop-filter: blur(8px);
+  animation: fadeInUp 1s ease-out 0.5s forwards;
+  opacity: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #f6f7fa;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 1em;
+  background-color: #fafafa;
+  transition: all 0.4s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #5a67d8;
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(90, 103, 216, 0.4);
+  transform: scale(1.03);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #3f51b5, #5a67d8);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(235, 235, 238, 0.4);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #d9dbe9, #abadb9);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(156, 158, 168, 0.6);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2em;
+  }
+
+  .form-container {
+    padding: 25px 20px;
+  }
+}

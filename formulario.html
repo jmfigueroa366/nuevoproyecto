@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formulario</title>
+    <link rel="stylesheet" href="formul.css">
+</head>
+<body>
+    <h1>formulario de registro</h1>
+    <div class="from container"></div>
+    <h2>completa tus datos</h2>
+    <form action="index.html" method="get">
+        <label>fecha de solicitud:</label>
+        <input type="date"name="fecha"required>
+        <label>nombre:</label>
+        <input type="texto" name="nombre"required>
+        <label>apellido:</label>
+        <input type="texto" name="apellido"required>    
+        <label>correo electronico:</label>
+        <input type="email"name="correo"required>
+        <label>numero:</label>
+        <input type="number"name="numero"required>
+        <label>mensajes:</label>
+        
+        <textarea></textarea>
+        <label> pais:</label>
+        <select>
+            <option value="se">seleciones</option>
+            <option value="es">españa</option>
+            <option value="co">colombia</option>
+            <option value="bra">brazil</option>
+            <option value="arg">argentina</option>
+            <option value="mx">mexico</option>
+            <option value="bo">bolivia</option>
+            <option value="rb">republica dominicana</option>
+            <option value="ch">chile</option>
+        </select>
+        <input type="submit"value="enviar"required>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,214 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #e0f7fa, #5a6dd7);
+  color: #333;
+}
+
+.header {
+  background: url('IMG-20250320-WA0018.jpg') no-repeat center center/cover;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+
+  animation: fadeInHeader 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+    
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px); 
+    -webkit-backdrop-filter: blur(3px); 
+    
+    animation: fadeOverlay 1.5s ease-out forwards;
+    opacity: 0; 
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+table {
+  width: 100%;
+  animation: fadeInTable 1s ease forwards;
+  opacity: 0;
+}
+
+table tbody tr:hover {
+  background-color: #0b0612;
+  transform: scale(1.02); 
+  transition: all 0.3s ease;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+footer {
+  background: linear-gradient(to right, #435aa5, #aeb1c0);
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInFooter 1.5s ease-out forwards;
+  opacity: 0;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+footer h4 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  animation: slideInFooterText 1.2s ease forwards;
+}
+
+footer p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+footer a {
+  color: #ffe;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.4s, transform 0.3s;
+}
+
+footer a:hover {
+  color: #0b12dd;
+  transform: scale(1.1);
+}
+
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFooterText {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTable {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeInHeader {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+a {
+  color: #10a8ce;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #1322c8;
+  text-decoration: underline;
+}
+
+.section-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid #1828ba;
+  border-radius: 15px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.section-box:hover {
+  transform: scale(1.01);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
